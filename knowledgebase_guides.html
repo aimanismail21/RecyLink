@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+    <style>
+    #topnav {
+        border: 1px solid;
+        margin: 0px;
+        padding: 0px;
+        width: 1500px;
+        height: 150px;
+        background-color: rgb(196, 196, 196);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .bar {
+        text-decoration:none;
+        color:black;
+        float: right;
+        margin: 20px;
+        padding: 80px 10px;
+    }
+    form.example {
+        position: absolute;
+        top: 250px;
+        left: 25%;
+    }
+    .guide {
+        border: 1px solid;
+        width: 250px;
+        height: 300px;
+        border-radius: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        left: 30%;
+        top: 40%;
+        text-align: center;
+        background-color: rgb(196, 196, 196);
+    }
+    .area {
+        border: 1px solid;
+        width: 250px;
+        height: 300px;
+        border-radius: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        left: 48%;
+        top: 40%;
+        text-align: center;
+        background-color: rgb(196, 196, 196);
+    }
+    .bottom {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        position: absolute;
+        top: 214px;
+        left: 349px;
+    }
+    .item {
+        text-decoration: none;
+        margin: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: black;
+        border: 1px solid;
+        border-bottom: none;
+        padding: 5px 20px;
+    }
+    </style>
+
+<body>
+    <div id="topnav">
+        <h1 style="position: absolute;left:50px;top:40px;">Recycling Knowledgebase</h1>
+        <h3><a class="bar"href="#newsletter">Newsletter</a></h3>
+        <h3><a class="bar"href="services_near_you.html">Recycling Services</a></h3>
+        <h3><a class="bar"href="knowledgebase_guides.html">Knowledgebase</a></h3>
+        <h3><a class="bar"href="landing_page.html">About</a></h3>
+    </div>
+    
+    <form class="example" action="action_page.php">
+        <input type="text" placeholder="What can I recycle?" name="search" size="100%">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    
+    <div class="guide">
+        <h2>Guide</h2>
+        <p>New to recycling?</p>
+        <p>Start here!</p>
+    </div>
+
+    <div class="area">
+        <h2>My Area</h2>    
+        <p>Drop-off Locations</p>
+        <p>Pick-up Schedules</p>
+    </div>
+
+    <div class='bottom'>
+        <a class="item" href="#what" style="background-color:rgb(90, 84, 84)"><b>WHAT</b></a>
+        <a class="item" href="#where" style="background-color:rgb(196,196,196)"><b>WHERE</b></a>
+    </div>
+</body>
+</html>
