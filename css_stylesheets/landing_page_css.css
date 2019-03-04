@@ -156,3 +156,8 @@
     background: #C4C4C4;
     border-radius: 30px;
 }
+
+/*Search Bar*/
+.search_bar {
+    text-align: right;
+}
