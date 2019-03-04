@@ -1,10 +1,12 @@
+/* format background and padding for top navbar banner */
 .top_nav_bar {
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 5%;
+	padding-right: 5%;
 	background-color: grey;
 	overflow: hidden;
 }
 
+/* format the Title of the page */
 .top_nav_bar h1 {
 	float: left;
 	color: black;
