@@ -161,3 +161,28 @@
 .search_bar {
     text-align: right;
 }
+
+.link_position a {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.link_position h1 {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.link_position a {
+    display: block;
+    float: right;
+    color:black;
+    text-align: center;
+    margin-top: 50px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}

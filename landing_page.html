@@ -15,10 +15,10 @@
     <div>
         <!--<img src="images/webcat-logo.png" id="logo_placement" alt="logo" width="50px" height="50px">-->
         <h1 class="Page_Name">Group Nine: Recycling Initiative</h1>
-        <a class="top_nav_bar bouncy" id="About" href="about.html" alt="Link to About Page">About</a>
-        <a class="top_nav_bar bouncy" id="Knowledgebase" href="knowledgebase_guides.html" alt="Link to Knowledgebase Page">Knowledgebase  </a>
-        <a class="top_nav_bar bouncy" id="Recycling_Services" href="services_near_you.html" alt="Link to Recycling Services Page">Recycling Services  </a>
-        <a class="top_nav_bar bouncy" id="Newsletter" href="newsletter.html" alt="Link to Newsletter Page">Newsletter  </a>
+        <a class="top_nav_bar link_position" id="About" href="about.html" alt="Link to About Page">About</a>
+        <a class="top_nav_bar link_position" id="Knowledgebase" href="knowledgebase_guides.html" alt="Link to Knowledgebase Page">Knowledgebase  </a>
+        <a class="top_nav_bar link_position" id="Recycling_Services" href="services_near_you.html" alt="Link to Recycling Services Page">Recycling Services  </a>
+        <a class="top_nav_bar link_position" id="Newsletter" href="newsletter.html" alt="Link to Newsletter Page">Newsletter  </a>
         <form class="search_bar" action="action_page.php">
             <input type="text" placeholder="What can I recycle?" name="search" size="50%">
             <button type="submit"><i class="fa fa-search">Search</i></button></form>
@@ -51,6 +51,20 @@ The purpose of this website is to serve as a repository of information on recycl
     <p>This area will include the contact information for our team.</p>
 
 </footer>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDzB5ifunDYOudXSVa0tudeyEYWqpcylXw",
+        authDomain: "project1930-group-9.firebaseapp.com",
+        databaseURL: "https://project1930-group-9.firebaseio.com",
+        projectId: "project1930-group-9",
+        storageBucket: "project1930-group-9.appspot.com",
+        messagingSenderId: "732519897347"
+    };
+    firebase.initializeApp(config);
+</script>
 </body>
 
 </html>
