@@ -51,8 +51,12 @@
                 margin-right: 6.75%;
                 height: 70px;
                 text-align: center;
-                background-color: #E0E0E0;
+                background-color: darkgray;
                 border-radius: 20px;
+            }
+
+            .tabs a.active {
+                background-color: #E0E0E0;
             }
 
             .page {
@@ -61,6 +65,7 @@
                 height: 500px;
                 left: 70px;
                 top: 220px;
+                padding: 20px;
                 margin-bottom: 20px;
                 background-color: #F2F2F2;
                 border: #E0E0E0 20px solid;
@@ -74,6 +79,7 @@
         </style>
     </head>
     <body>
+        <!--Contains Navigation Bar-->
         <div class='navbar'>
             <h1>Recycling Services</h2>
             <a href='/newsletter.html'>Newsletter</a>
@@ -82,13 +88,16 @@
             <a href='landing_page.html'>About</a>
         </div>
 
+        <!--Contains the three Tabs for Recycling Services-->
         <div class='tabs'>
             <a class='active'>Services Near You</a>
             <a>Community Forum</a>
             <a>Accessibility</a>
         </div>
 
+        <!--Contains the active tab's contents-->
         <div class='page'>
+            <!--Contains the search bars and list of services below it-->
             <div class='left'>
                 <caption>Location</caption>
                 <input type='text' placeholder='Search...'/>
@@ -96,6 +105,7 @@
                 <input type='text' placeholder='Search...'/>
                 <p>List of services after you enter a search keyword.</p>
             </div>
+            <!--Contains the map with locations of user and recycling services-->
             <div class='right'>
                 <p>This page will have a map showing user location and recycling services close by.</p>
             </div>
