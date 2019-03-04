@@ -5,15 +5,31 @@
 .top_nav_bar:visited {
     color: black;
 }
-.top_nav_bar{
+.top_nav_bar {
     padding: 20px;
     font-size: 150%;
-    /*margin: 20px 0 0;*/
-    text-align: center;
+    float: right;
+    margin: 10px;
+    margin-top: 50px;
+    top: 15px;
     display: inline-block;
+    border: 1px solid white;
+    border-radius: 15px;
     text-decoration: none;
 
 }
+.top_nav_bar:hover {
+    background-color: #ddd;
+    color: black;
+    text-decoration: none;
+}
+
+.top_nav_bar:active {
+    background-color:darkgray;
+    color: black;
+    text-decoration: none;
+}
+
 
 /* Nav Bar Banner */
 .nav_banner {
@@ -47,83 +63,7 @@
 
     background: #C4C4C4;
 }
-/* Page Name*/
-#About {
-    position: absolute;
-    width: 59px;
-    height: 26px;
-    left: 653px;
-    top: 95px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 22px;
-
-    border: 1px solid white;
-    border-radius: 15px;
-
-    color: white;
-}
-/* Knowledgebase */
-#Knowledgebase {
-    position: absolute;
-    width: 156px;
-    height: 26px;
-    left: 783px;
-    top: 95px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 22px;
-    border: 1px solid white;
-    border-radius: 15px;
-    color: white;
-
-}
-
-
-/* Recycling Services */
-#Recycling_Services {
-    position: absolute;
-    width: 183px;
-    height: 26px;
-    left: 1010px;
-    top: 95px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 22px;
-    border: 1px solid white;
-    border-radius: 15px;
-
-    color: white;
-}
-
-
-/* Newsletter */
-#Newsletter {
-    position: absolute;
-    width: 106px;
-    height: 26px;
-    left: 1264px;
-    top: 95px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 22px;
-    border: 1px solid white;
-    border-radius: 15px;
-
-    color: white;
-}
 
 
 /* Page Name */
@@ -159,5 +99,9 @@
 
 /*Search Bar*/
 .search_bar {
-    text-align: right;
+    right: 1px;
+    position: absolute;
+    top:120px;
 }
+
+
