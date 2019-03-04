@@ -14,10 +14,13 @@
 
 .top_nav_bar a {
 	display: block;
+	border: white 1px solid;
+	border-radius: 15px;
 	float: right;
 	color:black;
 	text-align: center;
 	margin-top: 50px;
+	margin-right: 5px;
 	padding: 14px 16px;
 	text-decoration: none;
 	font-size: 17px;
