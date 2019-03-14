@@ -1,6 +1,6 @@
 
 
-.accordion {
+.accordion { /*Expandable tabs with recyclable items*/
     background-color: rgb(196, 196, 196);
     color:black;
     cursor: pointer;
@@ -14,12 +14,12 @@
     transition: 0.4s;
   }
 
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  /* Add a background color to the button if it is clicked on and when you move the mouse over it (hover) */
   .active, .accordion:hover {
     background-color:grey;
   }
 
-.search input[type=text] {
+.search input[type=text] { /*Search bar*/
     padding: 8px;
     border: none;
     margin-top: 8px;
@@ -29,7 +29,7 @@
     width: 80%;    
       }
 
-.page {
+.page { /*Grey background*/
     position: absolute;
     width: 85%;
     height: 60%;
@@ -43,7 +43,7 @@
     text-align: center;
     }
 
-.navbottom {
+.navbottom { /*What and where tabs*/
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -51,7 +51,7 @@
     top: 3%;
     right: 33%;
 }
-.item {
+.item { /*What and where tabs*/
     text-decoration: none;
     margin: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -63,22 +63,17 @@
     width: 30%;
 }
 
-.accordion:after {
+.accordion:after { /*Plus sign in the recyclable items tabs*/
     content: '\02795'; /* Unicode character for "plus" sign (+) */
     font-size: 13px;
     color: #777;
     float: left;
     margin-left: 5px;
   }
-  
-.tabs {
-    text-align: center;
-    margin-right: 10%;
-    padding: 10%;
-} 
+   
+
 
 .tabs a {
-   
     text-decoration: none;
     margin: 250px;
     font-family: Arial, Helvetica, sans-serif;
@@ -90,7 +85,7 @@
     
 }
 
-.tabs a.active {
+.tabs a.active { /*Guide tab*/
     background-color: grey;
     border: none;
     border-top-right-radius: 20px;
@@ -101,7 +96,7 @@
     right: 65.6%;
 }
 
-.tabs a.not_active {
+.tabs a.not_active { /*Area tab*/
     background-color: #F2F2F2;
     border: none;
     border-top-right-radius: 20px;
