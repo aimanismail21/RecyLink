@@ -1,9 +1,13 @@
+/* CSS for Google Map API */
+/* Everything Below taken from https://developers.google.com/maps/documentation/javascript/examples */
+
 #map {
 	width: 50%;
 	height: 100%;
+	border: darkgray 10px solid;
+	border-radius: 3%;
 }
 
-/* Optional: Makes the sample page fill the window. */
 html, body {
 	height: 100%;
 	margin: 0;
