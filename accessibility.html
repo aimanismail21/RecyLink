@@ -1,1 +1,53 @@
-html 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accessibility</title>
+        <link rel="stylesheet" href="css_stylesheets/top_nav_bar.css"/>
+        <link rel="stylesheet" href="css_stylesheets/recycling_services.css"/>
+        <style>
+            img {
+                height: 40%;
+                width: 40%;
+                border: grey 2px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Contains Navigation Bar-->
+        <header>
+            <div class='top_nav_bar'>
+                <h1>Recycling Services</h2>
+                <a href='/newsletter.html'>Newsletter</a>
+                <a class='active' href='/services_near_you.html'>Recycling Services</a>
+                <a href='knowledgebase_guides.html'>Knowledgebase</a>
+                <a href='landing_page.html'>About</a>
+            </div>
+        </header>
+        
+        <!--Contains the three Tabs for Recycling Services-->
+        <div class='tabs'>
+            <a href='services_near_you.html'>Services Near You</a>
+            <a href='community_forum.html'>Community Forum</a>
+            <a class='active' href='accessibility.html'>Accessibility</a>
+        </div>
+
+        <!--Contains the active tab's contents-->
+        <div class='page'>
+            <div id='title'>
+                <h2>Alternative Bins</h2>
+                <p>
+                    A typical recycling bin may be difficult to maneuver. Thankfully, the market has
+                    a lot more options for you!
+                </p>
+            </div>
+            <div class='content'>
+                <h3>Wheeled Bins</h3>
+                <img src='images/wheeled_bin.jpg'/>
+            </div>
+            <div class='content'>
+                <h3>Recycling Bin Carts</h3>
+                <img src='images/recycling_cart.jpg'/>
+            </div>
+        </div>
+    </body>
+</html>
