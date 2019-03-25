@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RecyLink: Recycling Initiative</title>
+    <link rel="stylesheet" href="css_stylesheets/main.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB0eOSPi-RSqClZRIDuwNctzvn1sJlinRw",
+            authDomain: "recylink-42ab4.firebaseapp.com",
+            databaseURL: "https://recylink-42ab4.firebaseio.com",
+            projectId: "recylink-42ab4",
+            storageBucket: "recylink-42ab4.appspot.com",
+            messagingSenderId: "591578593216"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+<body style="background-color:snow;">
+
+<!--Nav Banner-->
+<!--Top Navigation Pane-->
+<header id="header">
+    <div class="inner">
+        <a href="index.html" class="logo">Recy<strong>Link</strong>: A BCIT Project on Sustainability</a>
+        <nav id="nav">
+            <a class="top_nav_bar" href="index.html" alt="Link to About Page">About</a>
+            <a class="top_nav_bar" href="knowledgebase_guides.html" alt="Link to Knowledgebase Page">Knowledgebase  </a>
+            <a class="top_nav_bar" href="newsletter.html" alt="Link to Newsletter Page">Newsletter</a>
+            <a class="top_nav_bar" href="services_near_you.html" alt="Link to Recycling Services Page">Recycling Services</a>
+
+        </nav>
+        <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    </div>
+</header>
+<!--Top Section of Website-->
+<section id="banner">
+    <div class="inner">
+        <header>
+            <h1>Welcome to RecyLink</h1>
+        </header>
+
+        <div class="flex ">
+
+            <div>
+                <!--icon for knowledgebase-->
+                <!--<span class="icon fa-car"></span>-->
+                <h3>Knowledgebase</h3>
+                <p>Guides on Recycling</p>
+                <p>Recycling in your Local Area</p>
+            </div>
+
+            <div>
+                <!--<span class="icon fa-camera"></span>-->
+                <h3>Recycling Services</h3>
+                <p>Pick-up Services</p>
+                <p>Community Assistance</p>
+            </div>
+
+            <div>
+                <!--<span class="icon fa-bug"></span>-->
+                <h3>Newsletter</h3>
+                <p>Personal Recycling Information</p>
+                <p>For Your Area</p>
+
+            </div>
+
+        </div>
+
+        <footer>
+            <a href="#" class="button">Search Bar Goes Here</a>
+        </footer>
+    </div>
+</section>
+
+<!-- Middle Section -->
+<section id="three" class="wrapper align-center">
+    <div class="inner">
+        <div class="flex flex-2">
+            <article>
+                <div class="image round">
+                    <img src="images/recycle.png" alt="Pic 01" height= "150px" />
+                </div>
+                <header>
+                    <h3>Knowledgebase<br /> <sub>Information on Recycling</sub></h3>
+                </header>
+                <p>Knowing how to recycle can be confusing, <br> and so we'll help you figure it out<br> item  by item.</p>
+                <footer>
+                    <a href="#" class="button">Learn More</a>
+                </footer>
+            </article>
+            <article>
+                <div class="image round">
+                    <img src="images/teamwork1.png" alt="Pic 02" height="150"/>
+                </div>
+                <header>
+                    <h3>Recycling Services <br><sub>Connect with Services and People</sub></h3>
+                </header>
+                <p>Need someone to pick up your items? <br>Would you like some help starting out?<br>Where do I get what I need to start recycling?</p>
+                <footer>
+                    <a href="#" class="button">Learn More</a>
+                </footer>
+            </article>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+
+        <h3>Give Your Feedback!</h3>
+
+        <form action="#" method="post">
+
+            <div class="field half first">
+                <label for="name">Name</label>
+                <input name="name" id="name" type="text" placeholder="Name">
+            </div>
+            <div class="field half">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email" placeholder="Email">
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+            </div>
+            <ul class="actions">
+                <li><input value="Send Message" class="button alt" type="submit"></li>
+            </ul>
+        </form>
+
+    </div>
+</footer>
+</body>
+
+</html>
