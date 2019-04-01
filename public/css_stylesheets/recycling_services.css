@@ -6,20 +6,26 @@
 .tabs a {
 	display: block;
 	text-decoration: none;
-	color: black;
 	margin-left: 5%;
 	margin-right: 5%;
 	padding: 2% 0;
-	background-color: darkgray;
+	border: 2px #91d1ad solid;
+	border-bottom: 0;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	float: left;
-	width: 23.33%;
+	width: 40%;
 }
 
 .tabs a.active {
-	background-color: #E0E0E0;
-	color: black;
+	background-color: rgba(108, 192, 145, 0.15);
+	border: 2px #91d1ad solid;
+	border-bottom: 0;
+	color: #6cc091
+}
+
+.tabs a:hover {
+	background-color: rgba(108, 192, 145, 0.15);
 }
 
 .page {
@@ -32,9 +38,8 @@
 	margin-left: 4%;
 	margin-right: 4%;
 	margin-top: 3%;
-	background-color: #F2F2F2;
-	border: #E0E0E0 20px solid;
-	border-radius: 20px;
+	border: #91d1ad 10px solid;
+	border-radius: 3vmax;
 }
 
 .page div.right {
@@ -60,4 +65,9 @@
 .page div.content {
 	float: left;
   	width: 50%;
+}
+
+img {
+	width: 50%;
+	height: 50%;
 }
