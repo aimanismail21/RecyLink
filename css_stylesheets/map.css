@@ -2,8 +2,6 @@
 /* Everything Below taken from https://developers.google.com/maps/documentation/javascript/examples */
 
 #map {
-	top: 0;
-	position: sticky;
 	width: 50%;
 	height: 80%;
 	border: #91d1ad 5px solid;
