@@ -18,10 +18,15 @@
         firebase.initializeApp(config);
     </script>
 </head>
-<body style="background-color:snow;">
+
+    <style>
+    
+    </style>
+
 
 <!--Nav Banner-->
 <!--Top Navigation Pane-->
+<body style="background: rgba(75, 75, 93, 1)">
 <header id="header">
     <div class="inner">
         <a href="index.html" class="logo">Recy<strong>Link</strong>: A BCIT Project on Sustainability</a>
@@ -30,7 +35,6 @@
             <a class="top_nav_bar" href="knowledgebase_guides.html" alt="Link to Knowledgebase Page">Knowledgebase  </a>
             <a class="top_nav_bar" href="newsletter.html" alt="Link to Newsletter Page">Newsletter</a>
             <a class="top_nav_bar" href="services_near_you.html" alt="Link to Recycling Services Page">Recycling Services</a>
-
         </nav>
     </div>
 </header>
@@ -42,6 +46,7 @@
         </header>
         <!--Body Content for Guides and My Area-->
         <div class="flex ">
+
             <div>
                 <a style="text-decoration:none;color:black;display: block"href="guides.html">
                     <!--icon for knowledgebase-->
@@ -51,7 +56,9 @@
                     <p>New to Recycling?</p>
                     <p>Start Here!</p>
                 </a>
+
             </div>
+
             <div><a style="text-decoration:none;color:black;display: block"href="knowledgebase_my_area.html">
 
                 <h3>My Area</h3>
@@ -59,45 +66,19 @@
                 <p>Pick-up Schedules</p>
             </a>
             </div>
-        </div>
 
+        </div>
         <!--Search Bar-->
         <footer>
-            <label style="color: lightgrey">Know what you're looking for? Let's search for it</label>
-            <br>
+            <label style="color: white">Know what you're looking for? Let's search for it</label>
             <form class="example" action="action_page.php"> <!--Search bar and button-->
-                <input class='button' id='search' type="text" style='color: lightgrey' placeholder="What can I recycle?" name="search" size="100%">
+                <input class='button' id='search' type="text" placeholder="What can I recycle?" name="search" size="100%">
                 <br>
                 <button class='button' type="submit">Search</i></button>
             </form>
         </footer>
     </div>
 </section>
-<footer id="footer">
-    <div class="inner">
 
-        <h3>Give Your Feedback!</h3>
-
-        <form action="#" method="post">
-
-            <div class="field half first">
-                <label for="name">Name</label>
-                <input name="name" id="name" type="text" placeholder="Name">
-            </div>
-            <div class="field half">
-                <label for="email">Email</label>
-                <input name="email" id="email" type="email" placeholder="Email">
-            </div>
-            <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-            </div>
-            <ul class="actions">
-                <li><input value="Send Message" class="button alt" type="submit"></li>
-            </ul>
-        </form>
-
-    </div>
-</footer>
 </body>
 </html>
