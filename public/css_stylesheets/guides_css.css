@@ -686,11 +686,7 @@ input[type="radio"] + label:before {
 }
 
 /* Accordion*/
-#textColor {
-    color: #FFFFFF;
-    background-color: white;
-}
-.accordion { /*Expandable tabs with recyclable items*/
+.accordion {
     background-color: #6cc091;
     color: white;
     cursor: pointer;
@@ -701,4 +697,28 @@ input[type="radio"] + label:before {
     border-bottom-right-radius: 8px;
     outline: none;
     transition: 0.4s;
+    display: inline-block;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: green;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: rgba(75, 75, 93, 0.85);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: center;
 }

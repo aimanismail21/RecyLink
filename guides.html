@@ -3,21 +3,8 @@
     <head>
         <title>Guides</title>
         <link rel="stylesheet" href="css_stylesheets/guides_css.css">
-        <link rel="javascript" href="">
-
         <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyB0eOSPi-RSqClZRIDuwNctzvn1sJlinRw",
-                authDomain: "recylink-42ab4.firebaseapp.com",
-                databaseURL: "https://recylink-42ab4.firebaseio.com",
-                projectId: "recylink-42ab4",
-                storageBucket: "recylink-42ab4.appspot.com",
-                messagingSenderId: "591578593216"
-            };
-            firebase.initializeApp(config);
-        </script>
+        <script src="js/firebase_init.js"></script>
     </head>
     <body>
 
@@ -25,13 +12,12 @@
     <header id="header">
         <div class="inner">
             <a href="index.html" class="logo">Recy<strong>Link</strong>: A BCIT Project on Sustainability</a>
-            <nav id="nav">
+            <nav id="">
                 <a class="top_nav_bar" href="index.html">About</a>
                 <a class="top_nav_bar" href="knowledgebase_guides.html">Knowledgebase</a>
                 <a class="top_nav_bar" href="newsletter.html">Newsletter</a>
                 <a class="top_nav_bar" href="services_near_you.html">Recycling Services</a>
             </nav>
-
         </div>
     </header>
     <section id='banner' style="background: rgba(75, 75, 93, 1)">
@@ -40,9 +26,7 @@
                     <header>
                         <h3>Recycling Guide: Information</h3>
                     </header>
-                    <footer>
-                        <p id="out"></p>
-                    </footer>
+                <p id="out"></p>
 
             <!--Search Bar-->
             <label style="color: white">Know what you're looking for? Let's search for it or click on an item below.</label>
@@ -53,26 +37,52 @@
             </form>
             <!--Accordion tabs-->
                 <button id='paper' class="accordion"><b>Paper</b></button>
+                <div class="panel">
+                    <p id='panel_1'>Loading..</p>
+                </div>
+
                 <button id='plastic' class="accordion"><b>Plastics</b></button>
+                <div class="panel">
+                    <p id="panel_2">Loading...</p>
+                </div>
+
                 <button id='aluminum' class="accordion"><b>Aluminum</b></button>
+                <div class="panel">
+                    <p id="panel_3">Loading...</p>
+                </div>
+
                 <button id='foam' class="accordion"><b>Foam</b></button>
+                <div class="panel">
+                    <p id='panel_4'>Loading...</p>
+                </div>
+
                 <button id='glass' class="accordion"><b>Glass</b></button>
+                <div class="panel">
+                    <p id="panel_5">Loading...</p>
+                </div>
+
                 <button id='clothing' class="accordion"><b>Clothing</b></button>
+                <div class="panel">
+                    <p id="panel_6">Loading...</p>
+                </div>
                 <button id='electronics' class="accordion"><b>Electronics</b></button>
+                <div class="panel">
+                    <p id="panel_7">Loading...</p>
+                </div>
                 <button id='furniture' class="accordion"><b>Furniture</b></button>
+                <div class="panel">
+                    <p id="panel_8">Loading...</p>
+                </div>
                 <button id='organicWaste' class="accordion"><b>Organic Waste</b></button>
+                <div class="panel">
+                    <p id="panel_9">Loading...</p>
+                </div>
             <!--Show Recycling Information on Accordion Button Click-->
-            <script>
-                var out = document.getElementById('out');
-                var dbref = firebase.database().ref('Knowledgebase/Guides/Paper').child('value');
-                dbref.on('value',
-                    function(snap){
-                    out.innerHTML = snap.val();
-                    })
-            </script>
+                <script src="js/guides.js"></script>
 
             <div>
             </div>
+        </div>
         </div>
     </section>
     </body>
