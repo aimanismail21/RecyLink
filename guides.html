@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Guides</title>
         <link rel="stylesheet" href="css_stylesheets/guides_css.css">
-        <link rel="stylesheet" href="css_stylesheets/top_nav_bar.css">
     </head>
     <body>
 
-    <div class="top_nav_bar"> <!--Title of page and navigation tabs-->
-        <h1>Recycling Knowledgebase: Guides</h1>
-        <a href="newsletter.html">Newsletter</h3> <!-- -->
-        <a href="services_near_you.html">Recycling Services</a>
-        <a class="active"href="knowledgebase_guides.html">Knowledgebase</a></h3>
-        <a href="index.html">About</a></h3>
-    </div>
+    <!--Top Navigation Pane-->
+    <header id="header">
+        <div class="inner">
+            <a href="index.html" class="logo">Recy<strong>Link</strong>: A BCIT Project on Sustainability</a>
+            <nav id="nav">
+                <a class="top_nav_bar" href="index.html">About</a>
+                <a class="top_nav_bar" href="knowledgebase_guides.html">Knowledgebase</a>
+                <a class="top_nav_bar" href="newsletter.html">Newsletter</a>
+                <a class="top_nav_bar" href="services_near_you.html">Recycling Services</a>
+            </nav>
 
-    
-    <div class="page"> <!--Grey Borders-->
-        <div class='navbottom'> <!--What and Where tabs-->
-            <a class="item" href="#what" style="background-color:rgb(90, 84, 84)"><b>WHAT</b></a>
-            <a class="item" href="#where" style="background-color:rgb(196,196,196)"><b>WHERE</b></a>
-        </div>    
-        <div class="search"> <!--Search Bar-->
-            <input type="text" placeholder="What Can I Recycle?">
-        </div> <!--Accordion tabs-->
-            <button class="accordion"><b>Paper</b></button>
-            <button class="accordion"><b>Plastics</b></button>
-            <button class="accordion"><b>Aluminum</b></button>
-            <button class="accordion"><b>Foam</b></button>
-            <button class="accordion"><b>Glass</b></button>
-            <button class="accordion"><b>Clothing</b></button>
-            <button class="accordion"><b>Cardboard</b></button>
-            <button class="accordion"><b>Electronics</b></button>
-            <button class="accordion"><b>Furniture</b></button>
-            <button class="accordion"><b>Kitchenware</b></button>
-            <button class="accordion"><b>Organic Waste</b></button>
-            <button class="accordion"><b>Containers</b></button>
-    </div>
-    <!--Guide and Area tabs-->
-    <div class="tabs">
-        <a class='active'><b>Guides</b></a>
-        <a class='not_active'><b>Area</b></a>
-    </div>
+        </div>
+    </header>
+    <section id='banner' style="background: rgba(75, 75, 93, 1)">
+        <div class="inner flex">
 
+            <!--Search Bar-->
+            <label style="color: white">Know what you're looking for? Let's search for it</label>
+            <form action="action_page.php"> <!--Search bar and button-->
+                <input class='button' id='search' type="text" placeholder="What can I recycle?" name="search">
+                <br>
+                <button class='button' type="submit">Search</i></button>
+            </form>
+
+            <!--Accordion tabs-->
+                <button id='paper' class="accordion"><b>Paper</b></button>
+                <button id='plastic' class="accordion"><b>Plastics</b></button>
+                <button id='aluminum' class="accordion"><b>Aluminum</b></button>
+                <button id='foam' class="accordion"><b>Foam</b></button>
+                <button id='glass' class="accordion"><b>Glass</b></button>
+                <button id='clothing' class="accordion"><b>Clothing</b></button>
+                <button id='electronics' class="accordion"><b>Electronics</b></button>
+                <button id='furniture' class="accordion"><b>Furniture</b></button>
+                <button id='organicWaste' class="accordion"><b>Organic Waste</b></button>
+            <div>
+                <table>
+                <thead style="clear:both; ">Item Recycling Information</thead>
+
+                    <tr>Body</tr>
+
+                </table>
+            </div>
+            <!--Show Recycling Information on Accordion Button Click-->
+            <script>
+                document.getElementById('paper').addEventListener('click',function(){alert('hello')});
+            </script>
+            <div>
+            </div>
+        </div>
+    </section>
     </body>
 </html>
