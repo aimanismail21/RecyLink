@@ -31,7 +31,7 @@
 .page {
 	display: block;
 	overflow: auto;
-	padding: 20px;
+	padding: 5%;
 	margin-bottom: 20px;
 	height: 100%;
 	text-align: center;

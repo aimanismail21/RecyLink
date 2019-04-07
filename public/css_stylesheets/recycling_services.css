@@ -31,8 +31,8 @@
 .page {
 	display: block;
 	overflow: auto;
-	padding: 2%;
-	margin-bottom: 2%;
+	padding: 5%;
+	margin-bottom: 20px;
 	height: 100%;
 	text-align: center;
 	margin-left: 4%;
