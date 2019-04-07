@@ -2694,6 +2694,7 @@
 
 	.subpage {
 		padding-top: 44px;
+		background: rgba(75, 75, 93, 1);		
 	}
 
 		.subpage #header {
