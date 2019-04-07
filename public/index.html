@@ -5,18 +5,9 @@
     <title>RecyLink: Recycling Initiative</title>
     <link rel="stylesheet" href="css_stylesheets/main.css" />
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyB0eOSPi-RSqClZRIDuwNctzvn1sJlinRw",
-            authDomain: "recylink-42ab4.firebaseapp.com",
-            databaseURL: "https://recylink-42ab4.firebaseio.com",
-            projectId: "recylink-42ab4",
-            storageBucket: "recylink-42ab4.appspot.com",
-            messagingSenderId: "591578593216"
-        };
-        firebase.initializeApp(config);
-    </script>
+    <script src="js/firebase_init.js"></script>
+    <script src="js/index.js"></script>
+    
 </head>
 <body style="background-color:snow;">
 
@@ -106,7 +97,7 @@
     </div>
 </section>
 <!-- Footer -->
-<footer id="footer">
+<footer id="footer"> 
     <div class="inner">
 
         <h3>Give Your Feedback!</h3>
@@ -126,11 +117,12 @@
                 <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
             </div>
             <ul class="actions">
-                <li><input value="Send Message" class="buttonAlt" type="submit"></li>
+                <li><input id="send" value="Send Message" class="buttonAlt" type="button" onclick="submitClick()"></li>
             </ul>
         </form>
         <p style="float:right;font-size:10px">Credit for CSS Template goes to Templated.co</p>
     </div>
+   
 </footer>
 </body>
 
