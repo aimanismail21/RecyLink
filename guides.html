@@ -3,6 +3,7 @@
     <head>
         <title>Guides</title>
         <link rel="stylesheet" href="css_stylesheets/guides_css.css">
+        <link rel="javascript" href="">
 
         <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
         <script>
@@ -34,16 +35,22 @@
         </div>
     </header>
     <section id='banner' style="background: rgba(75, 75, 93, 1)">
-        <div class="inner flex">
+        <div class="inner">
+            <div class="flex flex-2">
+                    <header>
+                        <h3>Recycling Guide: Information</h3>
+                    </header>
+                    <footer>
+                        <p id="out"></p>
+                    </footer>
 
             <!--Search Bar-->
-            <label style="color: white">Know what you're looking for? Let's search for it</label>
+            <label style="color: white">Know what you're looking for? Let's search for it or click on an item below.</label>
             <form action="action_page.php"> <!--Search bar and button-->
                 <input class='button' id='search' type="text" placeholder="What can I recycle?" name="search">
                 <br>
                 <button class='button' type="submit">Search</i></button>
             </form>
-
             <!--Accordion tabs-->
                 <button id='paper' class="accordion"><b>Paper</b></button>
                 <button id='plastic' class="accordion"><b>Plastics</b></button>
@@ -54,35 +61,16 @@
                 <button id='electronics' class="accordion"><b>Electronics</b></button>
                 <button id='furniture' class="accordion"><b>Furniture</b></button>
                 <button id='organicWaste' class="accordion"><b>Organic Waste</b></button>
-            <div>
-                <table>
-                <thead style="clear:both; ">Item Recycling Information</thead>
-
-                    <tr id="output">Body</tr>
-
-                </table>
-            </div>
             <!--Show Recycling Information on Accordion Button Click-->
             <script>
-                document.getElementById('paper').addEventListener('click',function(){
-                    var key_value = firebase.database().ref('Guides/Paper');
-                    document.console.log(key_value);
-
-                });
-
-                // write data into the dinosaur database
-                var name = "Plastic";
-                var description = 'plastics can be recycled this way';
-                firebase.database().ref("Guides/" + name).set({
-                    description: description
-                });
+                var out = document.getElementById('out');
+                var dbref = firebase.database().ref('Knowledgebase/Guides/Paper').child('value');
+                dbref.on('value',
+                    function(snap){
+                    out.innerHTML = snap.val();
+                    })
             </script>
 
-            <script>
-                var out = document.getElementById("output");
-                var db = firebase.database().ref().child("Paper");
-                db.on ("value", snap => out.innerText = snap.val());
-            </script>
             <div>
             </div>
         </div>

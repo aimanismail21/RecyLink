@@ -702,3 +702,8 @@ input[type="radio"] + label:before {
     outline: none;
     transition: 0.4s;
 }
+
+.out {
+    border: 5px;
+    font-size: 15px;
+}
