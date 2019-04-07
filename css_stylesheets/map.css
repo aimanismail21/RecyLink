@@ -4,8 +4,7 @@
 #map {
 	width: 50%;
 	height: 100%;
-	border: #91d1ad 5px solid;
-	border-radius: 3%;
+	border: rgba(75, 75, 93, 1) 0.2vmax solid;
 }
 
 html, body {
