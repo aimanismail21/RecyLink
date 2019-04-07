@@ -3,6 +3,20 @@
     <head>
         <title>Guides</title>
         <link rel="stylesheet" href="css_stylesheets/guides_css.css">
+
+        <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyB0eOSPi-RSqClZRIDuwNctzvn1sJlinRw",
+                authDomain: "recylink-42ab4.firebaseapp.com",
+                databaseURL: "https://recylink-42ab4.firebaseio.com",
+                projectId: "recylink-42ab4",
+                storageBucket: "recylink-42ab4.appspot.com",
+                messagingSenderId: "591578593216"
+            };
+            firebase.initializeApp(config);
+        </script>
     </head>
     <body>
 
@@ -44,13 +58,30 @@
                 <table>
                 <thead style="clear:both; ">Item Recycling Information</thead>
 
-                    <tr>Body</tr>
+                    <tr id="output">Body</tr>
 
                 </table>
             </div>
             <!--Show Recycling Information on Accordion Button Click-->
             <script>
-                document.getElementById('paper').addEventListener('click',function(){alert('hello')});
+                document.getElementById('paper').addEventListener('click',function(){
+                    var key_value = firebase.database().ref('Guides/Paper');
+                    document.console.log(key_value);
+
+                });
+
+                // write data into the dinosaur database
+                var name = "Plastic";
+                var description = 'plastics can be recycled this way';
+                firebase.database().ref("Guides/" + name).set({
+                    description: description
+                });
+            </script>
+
+            <script>
+                var out = document.getElementById("output");
+                var db = firebase.database().ref().child("Paper");
+                db.on ("value", snap => out.innerText = snap.val());
             </script>
             <div>
             </div>
