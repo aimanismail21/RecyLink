@@ -1,5 +1,7 @@
 var map;
 var vancouver = {lat: 49.2827, lng: -123.1207};
+var markers = [];
+var clickHandler = [];
 function initMap() {
     // Create the map.
     map = new google.maps.Map(document.getElementById('map'), {
@@ -8,6 +10,7 @@ function initMap() {
     mapTypeId: 'roadmap'
     });
     var service = new google.maps.places.PlacesService(map);
+    var directionsDisplay = new google.maps.DirectionsRenderer;
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
         // Get user location from device.
@@ -20,11 +23,10 @@ function initMap() {
         // Set Current Location.
         map.setCenter(userPosition);
 
-        var myLocation = new google.maps.Marker({
+        markers.push(new google.maps.Marker({
             position: userPosition,
-            icon: "http://maps.google.com/mapfiles/kml/paddle/red-stars.png",
             map: map
-        });
+        }));
 
         var request = {
             location: userPosition,
@@ -35,18 +37,17 @@ function initMap() {
         // Perform a Recycle search.
         service.textSearch(request, callback);
 
-        var clickHandler = new ClickEventHandler(map, userPosition);
+        clickHandler.push(new ClickEventHandler(map, userPosition, directionsDisplay));
     }, function() {
         // Set Location to Vancouver.
         map.setCenter(vancouver);
 
-        var myLocation = new google.maps.Marker({
+        markers.push(new google.maps.Marker({
             position: vancouver,
-            icon: "http://maps.google.com/mapfiles/kml/paddle/red-stars.png",
             map: map
-        });
+        }));
 
-        var clickHandler = new ClickEventHandler(map, vancouver);
+        clickHandler.push(new ClickEventHandler(map, vancouver, directionsDisplay));
 
         var request = {
             location: vancouver,
@@ -77,8 +78,6 @@ function initMap() {
     map.addListener('bounds_changed', function() {
         searchBox.setBounds(map.getBounds());
     });
-
-    var markers = [];
     
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
@@ -97,11 +96,24 @@ function initMap() {
 
         // For each place, get the icon, name and location.
         var bounds = new google.maps.LatLngBounds();
+
         places.forEach(function(place) {
             if (!place.geometry) {
             console.log("Returned place contains no geometry");
             return;
-            }
+            };
+
+            if (places.length == 1){         
+                // var service = new google.maps.places.PlacesService(map);
+                resetList();
+                var request = {
+                    location: place.geometry.location,
+                    radius: '2000',
+                    query: 'recycle'
+                };
+                // Perform a Recycle search.
+                service.textSearch(request, callback);
+            };
 
             // Create a marker for each place.
             markers.push(new google.maps.Marker({
@@ -109,6 +121,8 @@ function initMap() {
                 title: place.name,
                 position: place.geometry.location
             }));
+            
+            clickHandler[0].origin = place.geometry.location;
 
             if (place.geometry.viewport) {
             // Only geocodes have viewport.
@@ -117,27 +131,31 @@ function initMap() {
             bounds.extend(place.geometry.location);
             }
         });
-        // map.fitBounds(bounds);
+        map.fitBounds(bounds);
     });
 }
 
 function callback(results, status){
     if (status == google.maps.places.PlacesServiceStatus.OK){
-    createMarkers(results);
+        createMarkers(results);
     }
 }
 
 function createMarkers(places) {
     var bounds = new google.maps.LatLngBounds();
-    var placesList = document.getElementById('places');
-    
+    var placesList = document.createElement('ul');
+    document.getElementById('right-panel').appendChild(placesList);
+    placesList.id = 'places';
 
     for (var i = 0, place; place = places[i]; i++) {
         var marker = new google.maps.Marker({
             map: map,
+            icon: "https://www.google.com/mapfiles/arrow.png",
             title: place.name,
             position: place.geometry.location
         });
+
+        markers.push(marker);
         
         let lat = marker.getPosition().lat()
         let lng = marker.getPosition().lng()
@@ -149,6 +167,7 @@ function createMarkers(places) {
 
         var li = document.createElement('li');
         li.textContent = place.name;
+        li.className = 'place';
         placesList.appendChild(li);
 
         li.addEventListener('click', function(){
@@ -158,14 +177,19 @@ function createMarkers(places) {
 
         bounds.extend(place.geometry.location);
     };
-    console.log(recycling);
 }
 
-var ClickEventHandler = function(map, origin) {
+function resetList() {
+    var placesList = document.getElementById('places');
+    var parent = document.getElementById('right-panel');
+    parent.removeChild(placesList);
+}
+
+var ClickEventHandler = function(map, origin, directionsDisplay) {
     this.origin = origin;
     this.map = map;
     this.directionsService = new google.maps.DirectionsService;
-    this.directionsDisplay = new google.maps.DirectionsRenderer;
+    this.directionsDisplay = directionsDisplay;
     this.directionsDisplay.setMap(map);
     this.placesService = new google.maps.places.PlacesService(map);
     this.infowindow = new google.maps.InfoWindow;
