@@ -70,7 +70,7 @@ ul li:first-child {
 .page div.left {
 	display: block;
 	height: 100%;
-	contain: content;
+	/* contain: content; */
 	float: left;
 	right: 5%;
 	width: 48%;
