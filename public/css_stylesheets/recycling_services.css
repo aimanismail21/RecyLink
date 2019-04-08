@@ -27,10 +27,26 @@
 	background-color: rgba(255, 255, 255, 0.15);
 }
 
+ul {
+	list-style: none;
+	padding-left: 0;
+	font-size: 1.5vmax;
+}
+
+ul li {
+	border-top: solid 1px #dbdbdb;
+	padding: 0.5em 0;
+}
+
+ul li:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
+
 .page {
 	background: rgba(255, 255, 255, 0.9);
 	display: block;
-	overflow: auto;
+	overflow: hidden;
 	padding: 5%;
 	margin-bottom: 20px;
 	height: 100%;
@@ -47,8 +63,15 @@
 	text-align: left;
 }
 
+#right-panel {
+	overflow: scroll;
+	height: 100%;
+}
+
 .page div.left {
 	display: block;
+	height: 100%;
+	contain: content;
 	float: left;
 	right: 5%;
 	width: 48%;
