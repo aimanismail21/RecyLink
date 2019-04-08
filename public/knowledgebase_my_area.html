@@ -1,93 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Area</title>
-    <link rel="stylesheet" href="css_stylesheets/knowledgebaseMyArea.css">
-    <link rel="stylesheet" href="css_stylesheets/top_nav_bar.css">
-    <link rel="stylesheet" href="css_stylesheets/map2.css"/>
-
-</head>
-<body>
-
-<div class="top_nav_bar"> <!--Title of page and navigation tabs-->
-    <h1>Recycling Knowledgebase: My Area</h1>
-    <a href="newsletter.html">Newsletter</a> <!-- -->
-    <a href="services_near_you.html">Recycling Services</a>
-    <a class="active" href="knowledgebase_guides.html">Knowledgebase</a>
-    <a href="index.html">About</a>
-</div>
-
-
-<div class="page"> <!--Grey Borders-->
-    <!--The Body Tabs: Area and Guides-->
-    <div class="area_tabs">
-        <a class='active area_tabs'>My Area</a>
-        <a class='not_active area_tabs'>Guides</a>
-    </div>
-
-    <div class='navbottom'> <!--What and Where tabs-->
-        <a class="item" href="#what" style="background-color:rgb(90, 84, 84)"><b>WHAT</b></a>
-        <a class="item" href="#where" style="background-color:rgb(196,196,196)"><b>WHERE</b></a>
-    </div>
-
-    <!--Search Bar-->
-    <div class="search">
-        <input type="text" placeholder="What Can I Recycle?">
-
-        <!--Accordion tabs-->
-
-        <button class="accordion"><b>Vancouver</b></button>
-        <button class="accordion"><b>Burnaby</b></button>
-        <button class="accordion"><b>Richmond</b></button>
-        <button class="accordion"><b>Coquitlam</b></button>
-    </div>
-    <!--Asks user for their location to change map location-->
-    <div class='right' id="map"></div>
+    <meta charset="UTF-8">
+    <title>RecyLink: My Area</title>
+    <link rel="stylesheet" href="css_stylesheets/main.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script>
-        // Note: This example requires that you consent to location sharing when
-        // prompted by your browser. If you see the error "The Geolocation service
-        // failed.", it means you probably did not give permission for the browser to
-        // locate you.
-        var map, infoWindow;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 14
-            });
-            infoWindow = new google.maps.InfoWindow;
-
-            // Try HTML5 geolocation.
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    var pos = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    };
-
-                    infoWindow.setPosition(pos);
-                    infoWindow.setContent('Location found.');
-                    infoWindow.open(map);
-                    map.setCenter(pos);
-                }, function() {
-                    handleLocationError(true, infoWindow, map.getCenter());
-                });
-            } else {
-                // Browser doesn't support Geolocation
-                handleLocationError(false, infoWindow, map.getCenter());
-            }
-        }
-
-        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-            infoWindow.setPosition(pos);
-            infoWindow.setContent(browserHasGeolocation ?
-                'Error: The Geolocation service failed.' :
-                'Error: Your browser doesn\'t support geolocation.');
-            infoWindow.open(map);
-        }
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB0eOSPi-RSqClZRIDuwNctzvn1sJlinRw",
+            authDomain: "recylink-42ab4.firebaseapp.com",
+            databaseURL: "https://recylink-42ab4.firebaseio.com",
+            projectId: "recylink-42ab4",
+            storageBucket: "recylink-42ab4.appspot.com",
+            messagingSenderId: "591578593216"
+        };
+        firebase.initializeApp(config);
     </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKXTAPnp51Vhpy0LM-3mTOPrYezYaSsCc&callback=initMap">
-    </script>
-</div>
+</head>
+
+<style>
+
+</style>
+
+
+<!--Nav Banner-->
+<!--Top Navigation Pane-->
+<body style="background: rgba(75, 75, 93, 1)">
+<header id="header">
+    <div class="inner">
+        <a href="index.html" class="logo">Recy<strong>Link</strong>: A BCIT Project on Sustainability</a>
+        <nav id="nav">
+            <a class="top_nav_bar" href="index.html" alt="Link to About Page">About</a>
+            <a class="top_nav_bar" href="knowledgebase_guides.html" alt="Link to Knowledgebase Page">Knowledgebase  </a>
+            <a class="top_nav_bar" href="newsletter.html" alt="Link to Newsletter Page">Newsletter</a>
+            <a class="top_nav_bar" href="services_near_you.html" alt="Link to Recycling Services Page">Recycling Services</a>
+        </nav>
+    </div>
+</header>
+<!--Top Section of Website-->
+<section id="banner">
+    <div class="inner">
+        <header>
+            <h1>Under Construction</h1>
+        </header>
+        <!--Body Content for Guides and My Area-->
+        <div class="flex ">
+
+            <div>
+                <a style="text-decoration:none;color:black;display: block"href="guides.html">
+
+                    <h3>My Area</h3>
+                    <p>This area of the website is under construction!</p>
+                </a>
+
+            </div>
+
+
+        </div>
+        <!--Search Bar-->
+        <footer>
+            <label style="color: white">Know what you're looking for? Let's search for it</label>
+            <form class="example" action="action_page.php"> <!--Search bar and button-->
+                <input class='button' id='search' type="text" placeholder="What can I recycle?" name="search" size="100%">
+                <br>
+                <button class='button' type="submit">Search</i></button>
+            </form>
+        </footer>
+    </div>
+</section>
+
 </body>
 </html>
