@@ -7,27 +7,27 @@
         <link rel="stylesheet" href="css_stylesheets/main.css"/>
         <style>
         ::-webkit-input-placeholder {
-            color: rgba(75, 75, 93, 1) !important;
+            color: #fff !important;
             opacity: 1.0;
         }
 
         :-moz-placeholder {
-            color: rgba(75, 75, 93, 1) !important;
+            color: #fff !important;
             opacity: 1.0;
         }
 
         ::-moz-placeholder {
-            color: rgba(75, 75, 93, 1) !important;
+            color: #fff !important;
             opacity: 1.0;
         }
 
         :-ms-input-placeholder {
-            color: rgba(75, 75, 93, 1) !important;
+            color: #fff !important;
             opacity: 1.0;
         }
 
         .formerize-placeholder {
-            color: rgba(75, 75, 93, 1) !important;
+            color: #fff !important;
             opacity: 1.0;
         }
         </style>
@@ -44,24 +44,37 @@
                     <a class="top_nav_bar" href="newsletter.html" alt="Link to Newsletter Page">Newsletter</a>
                     <a class="top_nav_bar" href="services_near_you.html" alt="Link to Recycling Services Page">Recycling Services</a>
                 </nav>
-                <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
             </div>
         </header>
-        <br/>
-        <br/>
         <!--Contains the three Tabs for Recycling Services-->
-        <div class='tabs'>
-            <a class='active' href='services_near_you.html'>Services Near You</a>
-            <a href='accessibility.html'>Accessibility</a>
-        </div>
-        <br/>
+        <section id="banner" style="padding-bottom: 0; margin-bottom:0;">
+            <div class="inner" style="margin-bottom:0; padding-bottom:0;">
+                <header>
+                    <h1>Recycling Services</h1>
+                </header>
+                <div class="flex" style="margin-bottom: 0; padding-bottom: 0;">
+                    <div class='tabs' id='active' style="padding: 1% 15%;">
+                        <a class='active' href='services_near_you.html'>
+                            <h3>Services Near You</h3>
+                        </a>
+                    </div>
+                    <div class='tabs' style="padding: 1% 15%;">
+                        <a href='accessibility.html'>
+                            <h3>Accessibility</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!--Contains the active tab's contents-->
         <div class='page'>
             
             <!--Search Bar-->
             <div class='left'>
-
-                <input id="pac-input" class="controls" type="text" placeholder="Search..." style="border-color: rgba(75, 75, 93, 1); color: rgba(75, 75, 93, 1)">
+                <form>
+                <input id="pac-input" class="controls" type="text" placeholder="Your Location ...">
+                </form>
                 <br/>
                 <div id="right-panel">
                     <h2>Results</h2>
