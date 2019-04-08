@@ -18,7 +18,7 @@ function pullFirebaseValue(output_id, key){
     var dbref = firebase.database().ref('Knowledgebase/Guides/' + key).child('value');
     dbref.on('value',
         function(snap){
-            accordion_output.innerText = snap.val();
+            accordion_output.innerHTML = snap.val();
         })
 }
 // Drops down accordion button to show contents
