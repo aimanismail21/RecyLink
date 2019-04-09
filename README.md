@@ -1,6 +1,9 @@
 April 8, 2019
+
 COMP 1930 - Group Nine
+
 Project Name: RecyLINK: A BCIT Project on Sustainability
+
 Team: Jilliane Vina, John Gilpin, and Aiman Ismail
 ------------------------------------------------------------------------------------------------
 
