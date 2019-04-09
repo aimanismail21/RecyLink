@@ -2,16 +2,8 @@
 <html>
     <head>
         <title>Accessibility</title>
-        <!-- <link rel="stylesheet" href="css_stylesheets/top_nav_bar.css"/> -->
         <link rel="stylesheet" href="css_stylesheets/recycling_services.css"/>
         <link rel="stylesheet" href="css_stylesheets/main.css"/>
-        <style>
-            /* img {
-                height: 40%;
-                width: 40%;
-                border: grey 2px solid;
-            } */
-        </style>
     </head>
     <body style="background: rgba(75, 75, 93, 1)">
         <!--Nav Banner-->
@@ -28,14 +20,27 @@
                 <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
             </div>
         </header>
-        
-        <br/><br/>
 
         <!--Contains the three Tabs for Recycling Services-->
-        <div class='tabs'>
-            <a href='services_near_you.html'>Services Near You</a>
-            <a class='active' href='accessibility.html'>Accessibility</a>
-        </div>
+        <section id="banner" style="padding-bottom: 0; margin-bottom:0;">
+                <div class="inner" style="margin-bottom:0; padding-bottom:0;">
+                    <header>
+                        <h1>Recycling Services</h1>
+                    </header>
+                    <div class="flex" style="margin-bottom: 0; padding-bottom: 0;">
+                        <div class='tabs' style="padding: 1% 15%;">
+                            <a href='services_near_you.html'>
+                                <h3>Services Near You</h3>
+                            </a>
+                        </div>
+                        <div class='tabs' id='active' style="padding: 1% 15%;">
+                            <a class='active' href='accessibility.html'>
+                                <h3>Accessibility</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         <!--Contains the active tab's contents-->
         <div class='page'>
