@@ -7,6 +7,7 @@ Team: Jilliane Vina, John Gilpin, and Aiman Ismail
 Introduction
 
 Welcome to our project's repository. You will find the source code used in our project in the public folder. This folder, 'public', contains our HTML pages, our JS directory, our images directory, and css style sheet directory.
+
 ------------------------------------------------------------------------------------------------
 Public Directory - A collection of HTML pages that are deployed on our hosted website
 
