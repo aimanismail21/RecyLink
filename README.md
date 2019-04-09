@@ -1,21 +1,20 @@
-April 8, 2019
-------------------------------------------------------------------------------------------------
-
-COMP 1930 - Group Nine
-------------------------------------------------------------------------------------------------
-
 Project Name: RecyLINK: A BCIT Project on Sustainability
 ------------------------------------------------------------------------------------------------
 
+COMP 1930 - Group Nine
 Team: Jilliane Vina, John Gilpin, and Aiman Ismail
-------------------------------------------------------------------------------------------------
+April 8, 2019
+
+
 
 Introduction
+------------------------------------------------------------------------------------------------
 
 Welcome to our project's repository. You will find the source code used in our project in the public folder. This folder, 'public', contains our HTML pages, our JS directory, our images directory, and css style sheet directory.
 
 ------------------------------------------------------------------------------------------------
 Public Directory - A collection of HTML pages that are deployed on our hosted website
+------------------------------------------------------------------------------------------------
 
 index.html
 - The main landing page of our website
@@ -44,6 +43,7 @@ services_near_you.html
 - Map locations can be clicked on to plot a route to that location
 ------------------------------------------------------------------------------------------------
 JS Directory
+------------------------------------------------------------------------------------------------
 - A collection of javascript files that were used on our website
 
 firebase_init.js
@@ -62,6 +62,7 @@ newsletter.js
 - A simple collection of user email for a digital newsletter. Emails are collected and stored on our database
 ------------------------------------------------------------------------------------------------
 Images
+------------------------------------------------------------------------------------------------
 - A collection of images used on our website
 ------------------------------------------------------------------------------------------------
 
